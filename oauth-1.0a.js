@@ -208,7 +208,7 @@ OAuth.prototype.getParameterString = function(request, oauth_data) {
  * @return {String} Signing Key
  */
 OAuth.prototype.getSigningKey = function(token_secret) {
-  // token_secret = token_secret || "";
+  token_secret = token_secret || "";
 
   if (!this.last_ampersand && !token_secret) {
     return this.percentEncode(this.consumer.secret);
